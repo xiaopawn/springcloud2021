@@ -22,7 +22,7 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @PostMapping("/create")
-    public CommonResult<Integer> create(Payment payment){
+    public CommonResult<Integer> create(@RequestBody Payment payment){
         int result = paymentService.create(payment);
 
         log.info("插入结果" + result);
@@ -42,7 +42,7 @@ public class PaymentController {
         if (Objects.nonNull(payment)){
             return new CommonResult<>(200,"查询成功",payment);
         }else {
-            return new CommonResult<>(200,"没有对应记录 查询id:" + id,null);
+            return new CommonResult<>(444,"没有对应记录 查询id:" + id,null);
         }
     }
 }

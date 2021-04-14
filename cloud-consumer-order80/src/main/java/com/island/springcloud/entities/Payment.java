@@ -4,16 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.io.Serializable;
-
 /**
  * @author island
- * @version 1.0 2021/4/13
+ * @version 1.0 2021/4/13 17:30
  */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Payment implements Serializable {
+public class Payment {
 
     private Long id;
 

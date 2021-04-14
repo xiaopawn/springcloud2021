@@ -4,8 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.io.Serializable;
-
 /**
  * @author island
  * @version 1.0 2021/4/13
@@ -13,10 +11,16 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Payment implements Serializable {
+public class CommonResult<T> {
 
-    private Long id;
+    // 404 not_found
+    private Integer code;
 
-    private String serial;
+    private String message;
 
+    private T data;
+
+    public CommonResult(Integer code, String message){
+        this(code,message,null);
+    }
 }
