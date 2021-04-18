@@ -7,15 +7,14 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * @author island
- * @version 1.0 2021/4/13 17:34
+ * @version 1.0 2021/4/18 1:14
  */
 @Configuration
 public class ApplicationContextConfig {
 
-    // 开启负载均衡策略 要不然集群环境访问会报错
     @Bean
     @LoadBalanced
-    public RestTemplate getRestTemplate(){
+    public RestTemplate getRestTemplate() {
         return new RestTemplate();
     }
 }

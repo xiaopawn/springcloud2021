@@ -6,12 +6,12 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @author island
- * @version 1.0 2021/4/13
+ * @version 1.0 2021/4/18 1:12
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-public class PaymentMain8081 {
+public class OrderZkMain80 {
     public static void main(String[] args) {
-        SpringApplication.run(PaymentMain8081.class, args);
+        SpringApplication.run(OrderZkMain80.class,args);
     }
 }
